@@ -1,0 +1,455 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #65ccb8;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #65ccb8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#home {
+    background: linear-gradient(to right, #65ccb8, #fff);
+    padding: 120px 20px;
+    color: #333;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.5s;
+}
+
+.home-container:hover {
+    transform: scale(1.02); /* Slightly enlarge the container on hover */
+}
+
+.home-text {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Home Section Enhancements */
+.home-text h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+    animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: 3px solid #65ccb8; /* Typing cursor effect */
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #65ccb8; /* Cursor blink effect */
+    }
+}
+
+
+.home-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+    animation: textSlideIn 2s ease;
+}
+
+.home-text span {
+    color: #ffff;
+}
+
+.home-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    animation: slideIn 1s ease-in;
+}
+
+.home-image img {
+    width: 450px;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: imageGlow 2s infinite alternate;
+}
+
+.home-image img:hover {
+    transform: scale(1.1); /* Scale on hover */
+    box-shadow: 0 0 30px rgba(25, 20, 20, 0.7); /* Glow effect */
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff7f50;
+    transform: translateY(-3px); /* Raise the button on hover */
+}
+
+/* Keyframes for Animations */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes imageGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+#education {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#education h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #65ccb8;
+    
+}
+
+.education-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.education-card {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(101, 204, 184, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card img {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.education-card h3 {
+    font-size: 20px;
+   
+}
+
+.education-card p {
+    font-size: 1.2em;
+}
+
+.education-card:hover {
+    background-color: #65ccb8;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(101, 204, 184, 0.9);
+}
+
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .education-cards {
+        flex-direction: column;
+    }
+
+    .education-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* Technologies Grid */
+#technologies{
+    background: linear-gradient(to right, #65ccb8, #fff);
+}
+#technologies-heading{
+    color:#fff;
+    font-size: 2.5em;
+}
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tech-item {
+    margin: 10px;
+    text-align: center;
+    max-width: 150px;
+    
+}
+
+.tech-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border: #333;
+}
+.tech-item img:hover {
+    transform: scale(1.1); /* Scale on hover */
+    box-shadow: 0 0 30px rgba(25, 20, 20, 0.7) /* Glow effect */
+
+}
+
+.tech-item p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+
+
+/* Projects Cards */
+
+#projects-heading {
+    color: #65ccb8;
+    font-size: 2.5em; /* Adjust size as needed */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 cards in the first row */
+    gap: 30px;
+    padding: 50px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #65ccb8;
+    /*background:linear-gradient(to right, #65ccb8, #dedada);*/
+    color: #fff;
+    
+}
+
+.card:hover h3, 
+.card:hover p, 
+.card:hover a {
+    color: white; /* Change text and link color to white */
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #65ccb8;
+    text-decoration: none;
+    font-size: 0.9em;
+    margin: 0 10px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1200px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+
+
+
+/* Contact Section */
+
+#contact{
+    background: linear-gradient(to right, #65ccb8, #fff);
+}
+
+#contact-heading {
+    color: #fff;
+    font-size: 2.5em; /* Adjust size as needed */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .home-container {
+        flex-direction: column;
+    }
+
+    .tech-grid, .project-cards {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+}
